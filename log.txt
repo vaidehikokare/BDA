@@ -1,0 +1,6 @@
+alice 2025-11-09T08:00:00 login
+alice 2025-11-09T10:30:00 logout
+bob 2025-11-09T09:00:00 login
+bob 2025-11-09T12:00:00 logout
+bob 2025-11-09T14:00:00 login
+bob 2025-11-09T16:00:00 logout
