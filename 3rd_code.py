@@ -1,8 +1,12 @@
+# MapReduce is a programming model used to process large amounts of data in parallel across many computers (or cores).
+# Step	Description	Example
+# Map	Breaks big data into smaller chunks and applies a function to each piece independently.	Count words in one line of text.
+# Reduce	Combines (reduces) the results from the Map step into a single output.	Add up all the word counts from every line.
 from multiprocessing import Pool
 import pandas as pd
 import sqlite3
 
-
+# phool :running multiple tasks at the same time
 def mapper(row):
     return (row["Month"], row["Temperature_Celsius"])
 
@@ -70,3 +74,22 @@ def run_pipeline():
 
 if __name__ == "__main__":
     run_pipeline()
+# Load Data – Reads the forestfires.csv file into a Pandas DataFrame.
+
+# Save to Database – Stores the data in an SQLite database for SQL queries.
+
+# MapReduce (Parallel Processing) – Calculates average temperature per month using multiprocessing:
+
+# Map: Extract (Month, Temperature) pairs from each row.
+
+# Reduce: Group by month and compute the average.
+
+# Top Fire Months – Finds the months with the largest average burned area.
+
+# Correlation – Computes the correlation between temperature and burned area.
+
+# SQL Query – Queries the database to get average burned area per month, confirming Pandas results.
+
+# Pipeline Orchestration – Runs all steps sequentially and prints results neatly.
+
+# In short: It’s a forest fire analysis pipeline combining parallel processing, Pandas, and SQL to get insights like average temperature, top fire months, and correlations.
